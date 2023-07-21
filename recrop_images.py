@@ -288,7 +288,7 @@ def main(args):
         # Save cropped images
         cropped_img = crop_final(img_orig, size=size, quad=quad)
         os.makedirs(args.out_dir, exist_ok=True)
-        cv2.imwrite(os.path.join(args.out_dir, os.path.basename(img_path)), cropped_img)
+        cv2.imwrite(os.path.join(args.out_dir, os.path.basename(img_path).replace(".png",".jpg")), cropped_img)
 
     # Save quads
     print("results:", len(results_quad))
